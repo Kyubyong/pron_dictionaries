@@ -26,7 +26,7 @@ Click the name of the language to download the prebuilt dictionary.
 
 ## Note
 
-Any contributions / error reports are welcome. We will keep adding languages.
+We will keep adding languages. Any contributions / error reports are welcome. 
 
 ## Disclaimer
 
