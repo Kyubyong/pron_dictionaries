@@ -12,7 +12,7 @@ Pronunciation dictionaries can be used for several purposes. For example, one ca
 ## Work Flow
 * STEP 1. Download the [wiktionary database backup dumps](http://ftp.acc.umu.se/mirror/wikimedia.org/dumps) of the language you want.
 * STEP 2. Extract it to `data/raw/` folder.
-* STEP 3. Run `build_corpus.py`.
+* STEP 3. Run `make_dictionary.py`.
 
 ## Pre-built dictionaries
 Click the name of the language to download the prebuilt dictionary.
@@ -30,7 +30,7 @@ Any contributions / error reports are welcome. We will keep adding languages.
 
 ## Disclaimer
 
-We are not responsible for the content (headwords and pronunciations). They may contain mistakes and/or inconsistent use of symbols.
+We are not responsible for the content (headwords and pronunciations). They may contain mistakes made by us or the original creator.
 
 
 
