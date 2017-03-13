@@ -1,6 +1,6 @@
 # Pronunciation Dictionaries for Multiple Languages
 
-Pronunciation dictionaries can be used for several purposes. For example, one can convert text to a sequence of phonemes using them. Not surprisingly, you can freely access to a great English pronunciation dictionary provided by [CMU](https://github.com/cmusphinx/cmudict), although the pronunciation symbols are Arpabets, not IPAs. Again not surprisingly, it's hard to get pronunciation dictionaries for other languages. One reason is that for several languages their scripts are phonetic more or less; the pronunciation of a word can be inferred by some rules. However, neither rules always can cover everything nor everybody knows the rules. Decent and open-source pronunciation dictionaries are still necessary.
+Pronunciation dictionaries can be used for several purposes. For example, one can convert text to a sequence of phonemes using them. Not surprisingly, you have free access to a great English pronunciation dictionary provided by [CMU](https://github.com/cmusphinx/cmudict), although the pronunciation symbols are Arpabets, not IPAs. Again not surprisingly, it's hard to get pronunciation dictionaries for other languages. One reason is that for several languages their scripts are phonetic more or less; the pronunciation of a word can be inferred by some rules. However, rules often fail to cover everything. Besides, not everybody is aware of them. Decent open-source pronunciation dictionaries are still necessary.
 
 ## Requirements
 * lxml >= 3.3.3
