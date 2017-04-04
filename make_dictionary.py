@@ -67,6 +67,7 @@ def _get_entry_block(text):
              "ko": "한국어 ==",
              "tr": "Söz türü|Ad|Türkçe",
              }
+    ltag = ltags.get(lcode)
     # language specifier in Portuguese and Russian Wiktionary dump is surrounded with "=", not "=="
     if lcode in ["pt", "ru"]:
         for entry_block in re.split("(?m)^=(?!=)", text):
