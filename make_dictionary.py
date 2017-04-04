@@ -47,7 +47,7 @@ def _get_hw(elem):
         hw = elem.find('./{}title'.format(ns)).text
         
         # validity check
-        if " " in hw or "," in hw: # We will NOT cover multi-word headwords.
+        if any(word in hw for word in [' ', ',', 'Wiktionary:']): # We will NOT cover multi-word headwords.
             return None
         else:
             return hw
@@ -62,11 +62,20 @@ def _get_entry_block(text):
              "fr":"langue|fr",
              "it":"{{-it-}}",
              "pl":"język polski",
+             "pt": "{{-pt-}}",
+             "ru": "{{-ru-}}",
+             "ko": "한국어 ==",
+             "tr": "Söz türü|Ad|Türkçe",
              }
-    ltag = ltags.get(lcode)
-    for entry_block in re.split("(?m)^==(?!=)", text):
-        if ltag in entry_block:
-            return entry_block
+    # language specifier in Portuguese and Russian Wiktionary dump is surrounded with "=", not "=="
+    if lcode in ["pt", "ru"]:
+        for entry_block in re.split("(?m)^=(?!=)", text):
+            if ltag in entry_block:
+                return entry_block
+    else:
+        for entry_block in re.split("(?m)^==(?!=)", text):
+            if ltag in entry_block:
+                return entry_block
     return None
         
 def _get_prons(elem):
@@ -77,7 +86,7 @@ def _get_prons(elem):
         if lcode in ['de']:
             pron_blocks = re.findall("(?m){{IPA}} {{Lautschrift\|([^}]+)}}(?:[^{]+{{Lautschrift\|([^}]+)}})?", entry_block)
             prons = {_refine_pron(pron) for pron_block in pron_blocks for pron in pron_block if len(pron) > 0 and "..." not in pron and "…" not in pron}
-        elif lcode in ['it', 'fi', 'pl']:
+        elif lcode in ['it', 'fi', 'pl', 'ko', 'tr']:
             pron_blocks = re.findall("(?m){{IPA\d?\|([^}]+)", entry_block)
             prons = {_refine_pron(pron) for pron_block in pron_blocks for pron in pron_block.split("|")}
         elif lcode in ['es']:
@@ -86,6 +95,14 @@ def _get_prons(elem):
         elif lcode in ['fr']:
             pron_blocks = re.findall("(?m){{pron\|([^}\|]+)", entry_block)
             prons = {_refine_pron(pron_block) for pron_block in pron_blocks}
+        elif lcode in ['pt']:
+            pron_blocks = re.findall("(?m)\[?\[?AFI\]?\]?: \/([^\/]+)\/", entry_block) + \
+                          re.findall("(?m){{AFI\|\/([^\/]+)\/}}", entry_block)
+            prons = {_refine_pron(pron_block) for pron_block in pron_blocks}
+        elif lcode in ['ru']:
+            pron_blocks = re.findall("(?m){{transcriptions(?:-ru)?\|([^}]+)}}", entry_block)
+            prons = {_refine_pron(pron) for pron_block in pron_blocks for pron in pron_block.split("|")
+                     if ('.ogg' not in pron and len(pron) > 0)}
         return list(prons)
     except:
         return None
