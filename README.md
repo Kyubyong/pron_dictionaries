@@ -23,6 +23,10 @@ Click the name of the language to download the prebuilt dictionary.
 * [French](https://dl.dropboxusercontent.com/u/42868014/pron_dicts/fr.csv.tar.gz)
 * [Polish](https://dl.dropboxusercontent.com/u/42868014/pron_dicts/pl.csv.tar.gz)
 * [Finnish](https://dl.dropboxusercontent.com/u/42868014/pron_dicts/fi.csv.tar.gz)
+* [Korean](https://dl.dropboxusercontent.com/s/346v029h4fthgx4/ko.csv.tar.gz)
+* [Turkish](https://dl.dropboxusercontent.com/s/7gzitspqhyw0405/tr.csv.tar.gz)
+* [Portuguese](https://dl.dropboxusercontent.com/s/m837tkkclfxswp8/pt.csv.tar.gz)
+* [Russian](https://dl.dropboxusercontent.com/s/4j433o46ipcq1cj/ru.csv.tar.gz)
 
 ## Note
 
