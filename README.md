@@ -17,12 +17,12 @@ Pronunciation dictionaries can be used for several purposes. For example, one ca
 ## Pre-built dictionaries
 Click the name of the language to download the prebuilt dictionary.
 
-* [German](https://dl.dropboxusercontent.com/u/42868014/pron_dicts/de.csv.tar.gz)
-* [Italian](https://dl.dropboxusercontent.com/u/42868014/pron_dicts/it.csv.tar.gz)
-* [Spanish](https://dl.dropboxusercontent.com/u/42868014/pron_dicts/es.csv.tar.gz)
-* [French](https://dl.dropboxusercontent.com/u/42868014/pron_dicts/fr.csv.tar.gz)
-* [Polish](https://dl.dropboxusercontent.com/u/42868014/pron_dicts/pl.csv.tar.gz)
-* [Finnish](https://dl.dropboxusercontent.com/u/42868014/pron_dicts/fi.csv.tar.gz)
+* [German](https://www.dropbox.com/s/p38ercjip9gzj7g/de.csv.tar.gz?dl=0)
+* [Italian](https://www.dropbox.com/s/vwtg4iphwpz1b7h/it.csv.tar.gz?dl=0)
+* [Spanish](https://www.dropbox.com/s/r14cfgs0jjal2ta/es.csv.tar.gz?dl=0)
+* [French](https://www.dropbox.com/s/22zicbk4t9kx1pl/fr.csv.tar.gz?dl=0)
+* [Polish](https://www.dropbox.com/s/6uqhwjc3xz23pyr/pl.csv.tar.gz?dl=0)
+* [Finnish](https://www.dropbox.com/s/du2k9p3ovpgeou6/fi.csv.tar.gz?dl=0)
 * [Korean](https://dl.dropboxusercontent.com/s/346v029h4fthgx4/ko.csv.tar.gz)
 * [Turkish](https://dl.dropboxusercontent.com/s/7gzitspqhyw0405/tr.csv.tar.gz)
 * [Portuguese](https://dl.dropboxusercontent.com/s/m837tkkclfxswp8/pt.csv.tar.gz)
